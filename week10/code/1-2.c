@@ -5,9 +5,9 @@ int main()
 {
 	int t = 20;
 	int status;
+	//pid = fork();
 	static int s=30;
 	pid_t pid;
-	//pid = fork();
 	pid = vfork();
 	if(pid<0)
 	{
@@ -31,6 +31,13 @@ int main()
 	{
 		//wait(&status);					//vfork() cancel
 		//printf("exit code from child is %d\n",WEXITSTATUS(status));			//vfork() cancel
+		printf("after child pid = %d:&g=%d,&t=%d,&s=%d\n",getpid(),g,t,s);
+		sleep(3);
+		//_exit(0);
+		//return 0;
+	}
+	else
+	{
 		printf("parent pid = %d:&g=%p,&t=%p,&s=%p\n",getpid(),&g,&t,&s);
 		printf("parent pid = %d:&g=%d,&t=%d,&s=%d\n",getpid(),g,t,s);
 		return 0;

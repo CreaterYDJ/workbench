@@ -4,3 +4,8 @@
 #include <sys/types.h>
 #include <wait.h>
 #include <string.h>
+#include <sys/stat.h>
+#include <signal.h>
+#include <time.h>
+#include <sys/param.h>
+void init_daemon(void);

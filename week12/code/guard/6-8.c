@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h>
-void init_deamon(void);
+void init_daemon(void);
 int main()
 {
 	FILE *fp;

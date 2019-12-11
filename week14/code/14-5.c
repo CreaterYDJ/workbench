@@ -15,7 +15,7 @@ int main()
 {
 	pthread_t tid[NUM];
 	int ret[NUM],i;
-	struct sendval d;;
+	struct sendval d;
 	for(i=0;i<NUM;i++){
 		d.n=i;
 		d.s=100*(i+1);

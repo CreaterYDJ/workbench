@@ -10,4 +10,8 @@ struct sendval{
 	int n;
 	int s;
 };
+struct sl{
+	int n;
+	int* sum;
+};
 #define NUM 4
